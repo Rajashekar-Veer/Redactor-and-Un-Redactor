@@ -4,11 +4,11 @@
 	In this project we download a Daily Incident Summary PDF file from Norman Police Department website, and we read and process the data from the PDF file and create an SQLite database (policeDept.db) to store the extracted data. From the database we write a select query to print the Nature field and number of times a Nature has occurred in the downloaded file.
 
 ### **Setup.py and setup.cfg:** 
-	The setup.py file is used to automatically find the packages during the execution of the program.
+The setup.py file is used to automatically find the packages during the execution of the program.
 The setup.cfg file is needed for executing pytest command which is need to run the test cases on the project.
 
 ### **Pipfile and Pipfile.lock:** 
-	Pipfile is used to create a virtual environment for execution of our project. This is created using below command.
+Pipfile is used to create a virtual environment for execution of our project. This is created using below command.
 pipenv install –python 3.8.1
 
 ### **main.py** 
