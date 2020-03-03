@@ -15,7 +15,7 @@ pipenv install –python 3.8.1
 The main.py is the starting point of execution of our program. 
 The main.py can be executed after cloning the project cs5293sp20-project0 from git into local system by running the below line of code.
 
-	> pipenv run python project0/main.py –incidents URL
+	pipenv run python project0/main.py –incidents URL
 
 The main.py takes one parameter which is the URL of the PDF file. The main.py calls the functions
 fetchIncidents(url), extractIncidents(), created(), dbInsert(db,incidents), dbStatus(db) from project0.py file.
