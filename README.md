@@ -1,7 +1,7 @@
 # **Text Analysis on Norman Police Data**
 
 ## **Overview** 
-	In this project we download a Daily Incident Summary PDF file from Norman Police Department website, and we read and process the data from the PDF file and create an SQLite database (policeDept.db) to store the extracted data. From the database we write a select query to print the Nature field and number of times a Nature has occurred in the downloaded file.
+In this project we download a Daily Incident Summary PDF file from Norman Police Department website, and we read and process the data from the PDF file and create an SQLite database (policeDept.db) to store the extracted data. From the database we write a select query to print the Nature field and number of times a Nature has occurred in the downloaded file.
 
 ### **Setup.py and setup.cfg:** 
 The setup.py file is used to automatically find the packages during the execution of the program.
@@ -15,7 +15,7 @@ pipenv install –python 3.8.1
 The main.py is the starting point of execution of our program. 
 The main.py can be executed after cloning the project cs5293sp20-project0 from git into local system by running the below line of code.
 
-> pipenv run python project0/main.py –incidents URL
+	> pipenv run python project0/main.py –incidents URL
 
 The main.py takes one parameter which is the URL of the PDF file. The main.py calls the functions
 fetchIncidents(url), extractIncidents(), created(), dbInsert(db,incidents), dbStatus(db) from project0.py file.
