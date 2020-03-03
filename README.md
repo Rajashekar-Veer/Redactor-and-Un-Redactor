@@ -30,7 +30,7 @@ In this function we use urllib.urlopen() function to open the PDF file from the 
 The tempFile is then returned to the main.py file.
 
 • **extractIncidents():** 
-In this function we read in the tempFile that contains the PDF data bytes and using PdfFileReader() function from PyPDF2 library, we extract the text data from the tempFile.
+In this function we read in the tempFile that contains the PDF data bytes and using PdfFileReader() function from PyPDF2 library, we extract the text data from the tempFile. \
 ` Data = PdfFileReader(tempFile).getPage(i).extractText() ` is the code used to extract text data from the tempFile.
 The text data that is extracted is then processed by various Text analysis technique and converted to a list of lists containing row records of the PDF file.  To do this we first remove the unwanted data i.e headers and footer using sub() function of regular expression.
 Once the unwanted information is removed we then split the continuous text data into row records and the data is stored in a list by using ` re.split(r'\s+(?=\d{1,2}/\d{1,2}/\d{4} \d{1,2}:\d{1,2})', data) `. This List is then taken into a loop and each element of the list is iterated and is again split based on ‘\n’ into a sublist which containing each field value.
