@@ -1,35 +1,35 @@
-**Text Analysis on Norman Police Data**
+# **Text Analysis on Norman Police Data**
 
-**Overview**
+## **Overview** 
 	In this project we download a Daily Incident Summary PDF file from Norman Police Department website, and we read and process the data from the PDF file and create an SQLite database (policeDept.db) to store the extracted data. From the database we write a select query to print the Nature field and number of times a Nature has occurred in the downloaded file.
 
-**Setup.py and setup.cfg:**
+### **Setup.py and setup.cfg:** 
 	The setup.py file is used to automatically find the packages during the execution of the program.
 The setup.cfg file is needed for executing pytest command which is need to run the test cases on the project.
 
-**Pipfile and Pipfile.lock:**
+### **Pipfile and Pipfile.lock:** 
 	Pipfile is used to create a virtual environment for execution of our project. This is created using below command.
 pipenv install –python 3.8.1
 
-**main.py**
+### **main.py** 
 The main.py is the starting point of execution of our program. 
 The main.py can be executed after cloning the project cs5293sp20-project0 from git into local system by running the below line of code.
 
-pipenv run python project0/main.py –incidents <URL> 
+> pipenv run python project0/main.py –incidents URL
 
 The main.py takes one parameter which is the URL of the PDF file. The main.py calls the functions
 fetchIncidents(url), extractIncidents(), created(), dbInsert(db,incidents), dbStatus(db) from project0.py file.
 
 
-**project0.py** 
+### **project0.py**  
 The project0.py contains all the function necessary to complete this project.
 The functioning of each functions is mentioned below.
 
-• **fetchIncidents(url):**
+• **fetchIncidents(url):** 
 In this function we use urllib.urlopen() function to open the PDF file from the url that we passed as argument to the fetchIncidents() function, and then from the opened file we read the data by using urlib.open(), and stored the data which is in form of object to a globally declared tempFile. 
 The tempFile is then returned to the main.py file.
 
-• **extractIncidents():**
+• **extractIncidents():** 
 In this function we read in the tempFile that contains the PDF data bytes and using PdfFileReader() function from PyPDF2 library, we extract the text data from the tempFile.
 Data = PdfFileReader(tempFile).getPage(i).extractText() is the code used to extract text data from the tempFile.
 The text data that is extracted is then processed by various Text analysis technique and converted to a list of lists containing row records of the PDF file.  To do this we first remove the unwanted data i.e headers and footer using sub() function of regular expression.
@@ -62,7 +62,7 @@ The query result is then printed on the console and the same is returned to main
 
 
 
-**test_project0.py**
+### **test_project0.py** 
 The test_project0.py file consists of all test case related to each function defined in project0.py.
 On execution of test_project0.py runs all the test cases with project0.py and returns whether the test cases pass or fail. 
 There are 5 test cases written for each of the function defined in project0, these test cases are below.
