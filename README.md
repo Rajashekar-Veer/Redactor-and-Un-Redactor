@@ -1,4 +1,4 @@
-Text Analysis on Norman Police Data
+#Text Analysis on Norman Police Data
 
 Overview
 	     In this project we download a Daily Incident Summary PDF file from Norman Police Department website, and we read and process the data from the PDF file and create an SQLite database (policeDept.db) to store the extracted data. From the database we write a select query to print the Nature field and number of times a Nature has occurred in the downloaded file.
