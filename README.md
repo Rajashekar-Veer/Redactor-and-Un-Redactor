@@ -94,7 +94,14 @@ This function executes fetchIncidents(), extractIncidents(), createdb() and dbSt
 The assert statement checks whether the data the is retrieved is not null. If the condition is false it triggers an error.
 ` assert records is not None `
  		
-	
+## **Assumptions**
+The only assumption made in the project is that, if there exists any null value in a row, then it only exist in Nature column.
+
+## **How to run the code**
+- First we need to clone the repository to the local instance using git clone https://github.com/Rajashekar-Veer/cs5293sp20-project0.git.
+- Navigate to ../cs5293sp-project0 folder and run the below code to execute the project.
+> pipenv run python project0/main.py --incidents **URL**
+ - To execute the test cases of the project0 run **pytest**
 
 
 
